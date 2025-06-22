@@ -27,6 +27,7 @@ A simple Python application that combines AI-powered responses using Google's Ge
    ```
    python app.py
    ```
+   or via the .bat file (".sh for linux and mac") 
 2. Enter a search query when prompted or type `exit` to quit.
 3. The application will:
    - Display a brief AI-generated response from the Gemini model.
