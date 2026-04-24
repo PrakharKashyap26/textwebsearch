@@ -1,14 +1,14 @@
-from google import genai
+import google as genai
 
 def ai_reply(user_input):
-    client = genai.Client(api_key="API_KEY")
+    try:
+        genai.configure(api_key="AIzaSyDS6JKC_Jqa0XnSxI8LDRCTwj6Qi5-waSY")
 
-    predefined_prompt = "answer in a brief\n"
-    full_prompt = predefined_prompt + user_input
+        model = genai.GenerativeModel('gemini-1.5-flash')
+        response = model.generate_content("answer briefly:\n" + user_input)
 
-    response = client.models.generate_content(
-        model="gemini-2.0-flash",
-        contents=full_prompt,
-    )
-    
-    print(response.text)
+        print("\nAI Overview:\n")
+        print(response.text)
+
+    except Exception:
+        print("\nAI unavailable (quota or key issue)\n")
