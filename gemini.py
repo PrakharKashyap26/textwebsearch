@@ -1,14 +1,14 @@
 import google as genai
 
-def ai_reply(user_input):
-    try:
-        genai.configure(api_key="AIzaSyDS6JKC_Jqa0XnSxI8LDRCTwj6Qi5-waSY")
 
-        model = genai.GenerativeModel('gemini-1.5-flash')
-        response = model.generate_content("answer briefly:\n" + user_input)
+def summarize_query(query, api_key=None):
+    if api_key is None:
+        raise ValueError("Gemini API key is required.")
 
-        print("\nAI Overview:\n")
-        print(response.text)
+    genai.configure(api_key=api_key)
+    model = genai.GenerativeModel("gemini-1.5-flash")
+    response = model.generate_content("Summarize this query in one or two short sentences:\n" + query)
 
-    except Exception:
-        print("\nAI unavailable (quota or key issue)\n")
+    if hasattr(response, "text"):
+        return response.text.strip()
+    return str(response).strip()
