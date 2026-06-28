@@ -1,3 +1,25 @@
-api-key.txt
-__pycache__/gemini.cpython-313.pyc
-__pycache__/search.cpython-313.pyc
+# Environment
+.env
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Build
+dist/
+build/
+
+# Logs
+*.log

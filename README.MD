@@ -1,52 +1,89 @@
-# TexWebsearch
-A simple Python application that combines AI-powered responses using Google's Gemini model with web search capabilities via Google Custom Search API.
+# TexBrowse
 
-## Features
-- **AI Response**: Uses the Gemini model to provide brief answers to user queries.
-- **Web Search**: Performs web searches using Google's Custom Search API and displays relevant results with titles and links.
-- **Interactive CLI**: Continuously prompts the user for input until they choose to exit.
+TexBrowse is a beginner-friendly terminal web browser, similar to how Nano is a beginner-friendly alternative to Vim. It provides an intuitive terminal interface to search and browse the web, with optional AI-powered summaries.
 
-## Prerequisites
-- Python 3.x
-- Required Python packages:
-  - `requests`
-- Google API Key for Gemini and Custom Search Engine
-- Custom Search Engine ID (CSE ID)
+## Vision
+* **Not an AI Chatbot**: TexBrowse is a browser interface.
+* **Optional AI**: Works perfectly even without AI configured.
+* **Extensible & Provider-Agnostic**: Designed to easily add new AI and search providers.
+* **Terminal First**: Optimized for clean CLI reading and navigation.
+
+## Project Structure
+```
+texbrowse/
+│
+├── main.py              # Application entrypoint and loop
+├── requirements.txt     # Dependency list
+├── README.md            # Documentation
+├── .gitignore           # Git ignore configurations
+├── .env                 # Local environment keys (ignored)
+├── .env.example         # Environment template
+│
+├── config/              # Configuration & Settings management
+│   ├── __init__.py
+│   └── settings.py
+│
+├── ai/                  # AI Summary providers (Gemini, etc.)
+│   ├── __init__.py
+│   ├── base.py
+│   ├── gemini.py
+│   └── manager.py
+│
+├── search/              # Search engine integration (Google, DuckDuckGo, etc.)
+│   ├── __init__.py
+│   ├── base.py
+│   ├── google.py
+│   ├── duckduckgo.py
+│   └── manager.py
+│
+├── browser/             # Page rendering, history and bookmarks
+│   ├── __init__.py
+│   ├── renderer.py
+│   ├── navigation.py
+│   ├── history.py
+│   └── bookmarks.py
+│
+├── data/                # Persistent JSON data
+│   ├── bookmarks.json
+│   └── history.json
+│
+└── utils/               # Common helper utilities
+    ├── __init__.py
+    ├── http.py
+    └── text.py
+```
 
 ## Installation
-1. Clone or download the repository.
-2. Install the required package:
+
+1. Install requirements:
+   ```bash
+   pip install -r requirements.txt
    ```
-   pip install requests
+2. Copy the template environment file:
+   ```bash
+   copy .env.example .env
    ```
-3. Replace `API_KEY` in `gemini.py` and `search.py` with your Google API Key.
-4. Replace `CUSTOM SEARCH ENGINE ID` in `search.py` with your Google Custom Search Engine ID.
+3. Set your API credentials in `.env`.
+
+## Configuration
+All application settings are managed via `.env`.
+* `AI_PROVIDER`: The AI engine to use for summaries (e.g., `gemini`).
+* `GEMINI_API_KEY`: API key for Google Gemini model.
+* `SEARCH_PROVIDER`: The search engine to use (e.g., `searxng` or `duckduckgo`).
+* `SEARXNG_URL`: The URL of the SearXNG instance (defaults to `https://searx.be`).
+
+*If the SearXNG instance fails, is offline, or rate limits requests, TexBrowse automatically falls back to DuckDuckGo HTML scraping.*
+
 
 ## Usage
-1. Run the main application:
-   ```
-   python app.py
-   ```
-   or via the .bat file (".sh for linux and mac") 
-2. Enter a search query when prompted or type `exit` to quit.
-3. The application will:
-   - Display a brief AI-generated response from the Gemini model.
-   - Show web search results with titles and links.
 
-## Files
-- `app.py`: Main application script that handles user input and integrates AI and search functionalities.
-- `gemini.py`: Contains the `ai_reply` function to interact with the Gemini model for AI responses.
-- `search.py`: Contains the `simple_search` function to perform web searches using Google Custom Search API.
+Start the browser interface:
+```bash
+python main.py
+```
 
-## Notes
-- Ensure you have a valid Google API Key and CSE ID configured in the respective files.
-- The Gemini model used is `gemini-2.0-flash`. Verify model availability or update as needed.
-- The application assumes an active internet connection for API calls.
-
-## Limitations
-- Requires manual configuration of API keys.
-- Error handling for API failures or invalid inputs is minimal.
-- Search results are limited to the default response from the Google Custom Search API.
-
-## License
-This project is unlicensed. Use and modify at your own discretion.
+### CLI Controls
+* `Search: [query]`: Enter search query.
+* `[number]`: Open a specific search result by index.
+* `s`: Return to start a new search.
+* `q`: Quit TexBrowse.

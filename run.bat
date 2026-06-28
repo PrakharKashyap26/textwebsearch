@@ -1,14 +1,14 @@
 @echo off
-title TexWebsearch Terminal Browser
+title TexBrowse Terminal Browser
 
-echo Starting TexWebsearch...
+echo Starting TexBrowse...
 echo.
 
 REM Change to script directory
 cd /d %~dp0
 
 REM Run the app
-python app.py
+python main.py
 
 echo.
 echo Application closed.

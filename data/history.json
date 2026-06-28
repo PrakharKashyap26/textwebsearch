@@ -1,0 +1,158 @@
+[
+    {
+        "timestamp": "2026-06-28T03:47:26.012839",
+        "query": "test_query_val",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T03:47:46.881502",
+        "query": "test_query_val",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T03:48:36.263484",
+        "query": "linux filesystem",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T03:57:44.106719",
+        "query": "google",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T04:24:25.254050",
+        "query": "test query",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T04:26:31.386655",
+        "query": "what is google",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T04:27:46.203149",
+        "query": "what is google",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T04:35:48.198321",
+        "query": "what is ai",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T04:43:53.559624",
+        "query": "what is ai",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T04:44:38.454727",
+        "query": "ai",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T04:45:19.717009",
+        "query": null,
+        "url": "https://chatgpt.com/",
+        "title": "ChatGPT"
+    },
+    {
+        "timestamp": "2026-06-28T04:45:33.884655",
+        "query": null,
+        "url": "https://gemini.google.com/",
+        "title": "\u200eGoogle Gemini"
+    },
+    {
+        "timestamp": "2026-06-28T04:45:52.275647",
+        "query": "what is monkey wikipedia",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T04:46:04.870060",
+        "query": null,
+        "url": "https://en.wikipedia.org/wiki/Monkey",
+        "title": "Monkey - Wikipedia"
+    },
+    {
+        "timestamp": "2026-06-28T05:50:44.130225",
+        "query": "what is ai",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T05:51:48.542195",
+        "query": null,
+        "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+        "title": "Artificial intelligence - Wikipedia"
+    },
+    {
+        "timestamp": "2026-06-28T05:54:52.736508",
+        "query": "what is ai",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T05:55:20.655191",
+        "query": null,
+        "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+        "title": "Artificial intelligence - Wikipedia"
+    },
+    {
+        "timestamp": "2026-06-28T05:58:50.334950",
+        "query": "what is ai",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T05:59:20.290325",
+        "query": null,
+        "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+        "title": "Artificial intelligence - Wikipedia"
+    },
+    {
+        "timestamp": "2026-06-28T06:00:31.517719",
+        "query": "what is ai",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T06:00:48.666811",
+        "query": null,
+        "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+        "title": "Artificial intelligence - Wikipedia"
+    },
+    {
+        "timestamp": "2026-06-28T06:03:07.809273",
+        "query": "what is wikipedia",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T06:03:34.025267",
+        "query": null,
+        "url": "https://en.wikipedia.org/wiki/Wikipedia",
+        "title": "Wikipedia - Wikipedia"
+    },
+    {
+        "timestamp": "2026-06-28T06:04:24.034584",
+        "query": "what is a gun",
+        "url": null,
+        "title": null
+    },
+    {
+        "timestamp": "2026-06-28T06:05:29.652225",
+        "query": null,
+        "url": "https://en.wikipedia.org/wiki/Firearm",
+        "title": "Firearm - Wikipedia"
+    }
+]

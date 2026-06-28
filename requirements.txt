@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+python-dotenv
+google-generativeai
+google-genai
+trafilatura
+playwright
